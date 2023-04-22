@@ -1,0 +1,235 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+/* This is the Body Element style  */
+body {
+  font-family: 'Roboto', sans-serif;
+  background-image: url(./images/bg1.jfif.jpg);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: grid;
+  align-items: center;
+  grid-gap: 4rem;
+  background-repeat: no-repeat;
+}
+/* this is main container  */
+.main-container {
+  width: 100%;
+  height: 100vh;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 1000px;
+}
+
+/* This is the Card Shape stopwatch Background */
+.card-shape {
+  height: 500px;
+  width: 410px;
+  background: linear-gradient(#fbd9b1, #cf91ba, #fccd96);
+  border-radius: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  perspective: 800px;
+  box-shadow: 0px 15px 50px rgba(0, 0, 0, 0.4);
+  padding: 10px;
+  position: relative;
+  transform-style: preserve-3d;
+  animation: rotateBox 5s ease-in-out 1s;
+}
+/* this is the key frame rotate card  box  */
+
+@keyframes rotateBox {
+  0% {
+    transform: rotateY(0deg);
+    box-shadow: 0px 15px 50px rgba(0, 0, 0, 0.4);
+  }
+
+  25% {
+    transform: rotateY(90deg);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    background-color: #cfcfcf;
+  }
+
+  50% {
+    transform: rotateY(180deg);
+    box-shadow: 0px 15px 50px rgba(0, 0, 0, 0.4);
+    background-color: #fff;
+  }
+
+  75% {
+    transform: rotateY(270deg);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    background-color: #cfcfcf;
+  }
+
+  100% {
+    transform: rotateY(360deg);
+    box-shadow: 0px 15px 50px rgba(0, 0, 0, 0.4);
+    background-color: #fff;
+  }
+}
+/* This is the shaking keyFrame of  style */
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+
+  25% {
+    transform: translateX(-5px);
+  }
+
+  50% {
+    transform: translateX(5px);
+  }
+
+  75% {
+    transform: translateX(-5px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* this is the  card hover */
+.card-shape:hover {
+  animation: shake 0.5s;
+}
+
+/* this is the heading stop watch  */
+.heading h1 {
+  text-align: center;
+  font-size: 40px;
+  margin-bottom: 30px;
+  animation: colorChange 5s ease-in-out 1s;
+}
+/* this is the utility class */
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* this is the timer container  */
+.timer-container {
+  width: 100%;
+  height: 200px;
+  perspective: 1000px;
+}
+/* this is the display container of countDown Timer  */
+.display {
+  position: relative;
+  transform-style: preserve-3d;
+  animation: rotateBox 5s ease-in-out 1s;
+}
+
+.display span {
+  font-size: 45px;
+  font-weight: bold;
+  margin: 0 5px;
+  color: #f44336;
+}
+
+.display .separator {
+  position: relative;
+  font-size: 50px;
+  color: #000;
+}
+
+/* this is the button container of start, stop and reset */
+.btn-container {
+  margin-top: 10px;
+  flex-direction: row;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+  border-radius: 0 0 20px 20px;
+}
+/* This is the button styling */
+.btn-container .btn {
+  background: linear-gradient(#80b4e4, #3a2d2c);
+  color: #fff;
+  font-size: 20px;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 20px;
+  margin: 0 10px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+/* This is the button Hover styling */
+.btn:hover {
+  background: linear-gradient(#6ae7fd, #745755);
+  transform: translateY(-5px);
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.4);
+}
+
+/*  Media Queries for mobile view and tablet */
+@media screen and (max-width: 768px) {
+  .card-shape {
+    width: 90%;
+    height: 80%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .heading h1 {
+    font-size: 2rem;
+  }
+
+  .display {
+    font-size: 3rem;
+  }
+
+  .btn {
+    font-size: 1rem;
+    padding: 5px 10px;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .heading h1 {
+    font-size: 27px;
+    margin: 0px;
+    padding: 10px;
+  }
+
+  .timer-container {
+    padding: 0px;
+    display: grid;
+
+  }
+
+  .display span {
+    font-size: 28px;
+  }
+
+  .display .separator {
+    font-size: 28px;
+  }
+
+  .display {
+    font-size: 0px;
+    padding: 0px;
+    padding-bottom: 10px;
+  }
+
+  .btn-container {
+    flex-wrap: wrap;
+    margin-top: 10px;
+  }
+
+  .btn {
+    font-size: 2px;
+    padding: 10px 10px;
+  }
+}
+
+/* this is the code end here  */

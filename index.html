@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Set the character encoding and meta information -->
+    <meta charset="UTF-8">
+    <meta name="description" content="Stop Watch Timer">
+    <meta name="keywords" content="stopwatch, timer, online timer">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Set the page title and include the CSS stylesheet -->
+    <title>Stop Watch Timer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Create the main container and utility class center  -->
+    <div class="main-container center">
+        <!--  card shape container and utility class center -->
+        <div class="card-shape center">
+            <!--  heading and utility class center -->
+            <div class="heading center">
+                <h1>Stop Watch Timer!</h1>
+            </div>
+
+            <!-- timer container and utility class center -->
+            <div class="timer-container center">
+                <!--  timer display container -->
+                <div class="display ">
+                    <span class="hours count">00</span>
+                    <span class="separator count">:</span>
+                    <span class="minutes count">00</span>
+                    <span class="separator count">:</span>
+                    <span class="seconds count">00</span>
+                    <span class="separator count">:</span>
+                    <span class="centiseconds count">00</span>
+                </div>
+            </div>
+
+            <!--  button container -->
+            <div class="btn-container center">
+                <button class="btn" id="start-btn">Start</button>
+                <button class="btn" id="stop-btn">Stop</button>
+                <button class="btn" id="reset-btn">Reset</button>
+            </div>
+        </div>
+    </div>
+    <!-- Stop Watch HTML Code End Here. -->
+    <!--  JavaScript file -->
+    <script src="app.js"></script>
+</body>
+
+</html>
